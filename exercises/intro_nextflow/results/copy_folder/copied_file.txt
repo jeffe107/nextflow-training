@@ -1,1 +1,0 @@
-/mnt/c/Users/USER/Downloads/sib/nextflow-training/exercises/intro_nextflow/work/7d/b8ddad66b0f8ac89572bf41f73b414/copied_file.txt

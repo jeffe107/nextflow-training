@@ -1,1 +1,0 @@
-/mnt/c/Users/USER/Downloads/sib/nextflow-training/exercises/intro_nextflow/work/fa/2620d8838967dfea977297db00e423/hello.txt
