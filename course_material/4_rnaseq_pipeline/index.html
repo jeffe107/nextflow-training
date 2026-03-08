@@ -9,25 +9,21 @@
       
       
       
-        <link rel="prev" href="..">
-      
-      
-        <link rel="next" href="../course_schedule/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/SIB_logo.svg">
+      <link rel="icon" href="../../assets/images/SIB_logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
-        <title>Precourse preparations - Nextflow in Action Build Smarter, Faster, Reproducible Pipelines</title>
+        <title>4 rnaseq pipeline - Nextflow in Action Build Smarter, Faster, Reproducible Pipelines</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -46,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#background-knowledge" class="md-skip">
+        <a href="#global-engines-conda-vs-docker" class="md-skip">
           Skip to content
         </a>
       
@@ -81,12 +77,12 @@
             <div class="md-banner__inner md-grid md-typeset">
               
   You're not viewing the latest version.
-  <a href="../.."> 
+  <a href="../../.."> 
     <strong>Click here to go to latest.</strong>
   </a>
 
             </div>
-            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
           </aside>
         
       </div>
@@ -98,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Nextflow in Action Build Smarter, Faster, Reproducible Pipelines" class="md-header__button md-logo" aria-label="Nextflow in Action Build Smarter, Faster, Reproducible Pipelines" data-md-component="logo">
+    <a href="../.." title="Nextflow in Action Build Smarter, Faster, Reproducible Pipelines" class="md-header__button md-logo" aria-label="Nextflow in Action Build Smarter, Faster, Reproducible Pipelines" data-md-component="logo">
       
-  <img src="../assets/images/SIB_logo.svg" alt="logo">
+  <img src="../../assets/images/SIB_logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -117,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Precourse preparations
+              4 rnaseq pipeline
             
           </span>
         </div>
@@ -207,9 +203,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Nextflow in Action Build Smarter, Faster, Reproducible Pipelines" class="md-nav__button md-logo" aria-label="Nextflow in Action Build Smarter, Faster, Reproducible Pipelines" data-md-component="logo">
+    <a href="../.." title="Nextflow in Action Build Smarter, Faster, Reproducible Pipelines" class="md-nav__button md-logo" aria-label="Nextflow in Action Build Smarter, Faster, Reproducible Pipelines" data-md-component="logo">
       
-  <img src="../assets/images/SIB_logo.svg" alt="logo">
+  <img src="../../assets/images/SIB_logo.svg" alt="logo">
 
     </a>
     Nextflow in Action Build Smarter, Faster, Reproducible Pipelines
@@ -236,7 +232,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -260,35 +256,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Precourse preparations
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../precourse/" class="md-nav__link">
         
   
   
@@ -304,108 +275,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#background-knowledge" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Background knowledge
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Background knowledge">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#unix" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        UNIX
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#software" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Software
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Software">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#os" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OS
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#code-editor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Code editor
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Code editor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#video-tutorial" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Video tutorial
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -417,7 +286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../course_schedule/" class="md-nav__link">
+      <a href="../../course_schedule/" class="md-nav__link">
         
   
   
@@ -491,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../course_material/1_guidelines/" class="md-nav__link">
+      <a href="../1_guidelines/" class="md-nav__link">
         
   
   
@@ -519,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../course_material/2_introduction_nextflow/" class="md-nav__link">
+      <a href="../2_introduction_nextflow/" class="md-nav__link">
         
   
   
@@ -547,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../course_material/3_hello_pipeline/" class="md-nav__link">
+      <a href="../3_hello_pipeline/" class="md-nav__link">
         
   
   
@@ -575,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../course_material/4_optimising_nextflow/" class="md-nav__link">
+      <a href="../4_optimising_nextflow/" class="md-nav__link">
         
   
   
@@ -603,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../course_material/5_reproducibility_nextflow/" class="md-nav__link">
+      <a href="../5_reproducibility_nextflow/" class="md-nav__link">
         
   
   
@@ -631,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../course_material/6_hpc_nextflow/" class="md-nav__link">
+      <a href="../6_hpc_nextflow/" class="md-nav__link">
         
   
   
@@ -659,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../course_material/7_debugging_nextflow/" class="md-nav__link">
+      <a href="../7_debugging_nextflow/" class="md-nav__link">
         
   
   
@@ -712,50 +581,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#background-knowledge" class="md-nav__link">
+  <a href="#global-engines-conda-vs-docker" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Background knowledge
+        Global engines: Conda vs Docker
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Background knowledge">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#unix" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        UNIX
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#software" class="md-nav__link">
+  <a href="#profiles-adapting-to-different-environments" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Software
+        Profiles: adapting to different environments
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Software">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containers-and-conda-running-tools-reproducibly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Containers and Conda: running tools reproducibly
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Containers and Conda: running tools reproducibly">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#os" class="md-nav__link">
+  <a href="#running-the-hello-pipeline-with-containers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        OS
+        Running the hello-pipeline with containers
       
     </span>
   </a>
@@ -763,30 +626,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#code-editor" class="md-nav__link">
+  <a href="#running-the-hello-pipeline-with-conda" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Code editor
+        Running the hello-pipeline with Conda
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Code editor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#video-tutorial" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Video tutorial
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -815,27 +661,126 @@
   
 
 
-  <h1>Precourse preparations</h1>
+  <h1>4 rnaseq pipeline</h1>
 
-<h2 id="background-knowledge">Background knowledge</h2>
-<p>As is stated in the course prerequisites at the <a href="https://www.sib.swiss/training/course/20260317_NEXAC">announcement web page</a>, we expect participants to have a basic understanding of working with the command line on UNIX-based systems and a <a href="https://github.com/features/codespaces">GitHub Codespaces</a> account.</p>
-<h3 id="unix">UNIX</h3>
-<p>You can test your UNIX skills with a quiz <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2BEWeOKLbIRGBT_aDEGPce1FOaVYBbhBiaqcaHoBKNB27MQ/viewform?usp=sf_link">here</a>. If you don&rsquo;t have experience with UNIX command line, or if you are unsure whether you meet the prerequisites, follow our <a href="https://edu.sib.swiss/pluginfile.php/2878/mod_resource/content/4/couselab-html/content.html">online UNIX tutorial</a>.</p>
-<h2 id="software">Software</h2>
-<h3 id="os">OS</h3>
-<p>This is an OS-agnostic course that requires from only to count with a laptop, a modern browser and the GitHub Codespaces account.</p>
-<h3 id="code-editor">Code editor</h3>
-<p>You will be provided with a link to create the workspace in GitHub Codespaces. This link will automatically open VS code on your browser. Thus, it is expected that you are familiar with the layout and basic functionalities VS code has. Otherwise, please check this quick <a href="https://code.visualstudio.com/docs/getstarted/getting-started">tutorial</a> before the course to understand where everything is. Either way, there will be a short introduction to VS code at the beginning of the online session.</p>
-<p>This is the link to GitHub Codespaces:</p>
-<p><a href="https://codespaces.new/nextflow-io/training?quickstart=1&amp;ref=master"><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg" /></a></p>
-<h4 id="video-tutorial">Video tutorial</h4>
-<p>You can find a (cool) video tutorial to learn about VS code:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1ZfO149BJvg" title="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen><a href="https://www.ivatech.dev" style="display:none;">website development</a></iframe>
-
+<ul>
+<li>
+<p>Configure and run the same workflow using either containers or Conda environments.</p>
+</li>
+<li>
+<p><strong>Execution in containers or Conda</strong>, depending on your environment.</p>
+</li>
+<li>
+<p><strong>How we execute tools</strong> (Conda vs Docker).</p>
+</li>
+<li>
+<p><strong>Named profiles</strong> for different environments (laptop vs HPC).</p>
+</li>
+</ul>
+<h3 id="global-engines-conda-vs-docker">Global engines: Conda vs Docker</h3>
+<p>At the top of <code>nextflow.config</code> you will find:</p>
+<ul>
+<li><strong><code>docker.enabled = false</code></strong>: Docker is off by default.</li>
+<li><strong><code>conda.enabled = true</code></strong>: Conda environments are enabled by default.</li>
+</ul>
+<p>This means:</p>
+<ul>
+<li>Processes with a <code>conda</code> directive will use Conda <strong>unless</strong> a profile overrides this.</li>
+<li>Docker is disabled unless explicitly turned on via a profile.</li>
+</ul>
 <details class="info">
-<summary>If you want also AI capabilities&hellip;</summary>
-<p>There are alternatives to VS code. Try Cursor, which is both an IDE and an AI code assistant.
-<a href="https://cursor.com/home">https://cursor.com/home</a></p>
+<summary>Why configure this centrally?</summary>
+<p>By toggling <code>docker.enabled</code> and <code>conda.enabled</code> in <code>nextflow.config</code>, you can move the same workflow between environments (e.g. laptop vs HPC cluster) <strong>without changing any process code</strong>.</p>
+</details>
+<h3 id="profiles-adapting-to-different-environments">Profiles: adapting to different environments</h3>
+<p>The <code>profiles</code> block defines three example profiles:</p>
+<ul>
+<li><strong><code>my_laptop</code></strong>:</li>
+<li><code>process.executor = 'local'</code></li>
+<li><code>docker.enabled = true</code> (enables Docker for container execution)</li>
+<li><strong><code>univ_hpc</code></strong>:</li>
+<li><code>process.executor = 'slurm'</code></li>
+<li><code>conda.enabled = true</code></li>
+<li><code>process.resourceLimits</code> set to large values (memory, CPUs, time)</li>
+<li><strong><code>test</code></strong>:</li>
+<li>Overrides <code>params.input</code>, <code>params.batch</code> and <code>params.character</code> for a quick test run.</li>
+</ul>
+<p>You select a profile with <code>-profile</code>:</p>
+<div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>hello-pipeline.nf<span class="w"> </span>-profile<span class="w"> </span>my_laptop
+nextflow<span class="w"> </span>run<span class="w"> </span>hello-pipeline.nf<span class="w"> </span>-profile<span class="w"> </span>univ_hpc
+nextflow<span class="w"> </span>run<span class="w"> </span>hello-pipeline.nf<span class="w"> </span>-profile<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<details class="success">
+<summary>Exercise: create your own profile</summary>
+<ul>
+<li>Copy the <code>my_laptop</code> profile and create a new one, e.g. <code>training_cluster</code>.</li>
+<li>Change its executor and enable either Docker or Conda according to your environment.</li>
+<li>Run <code>nextflow run hello-pipeline.nf -profile training_cluster</code> and confirm that the workflow still runs without changing <strong>any</strong> <code>.nf</code> file.</li>
+</ul>
+</details>
+<h2 id="containers-and-conda-running-tools-reproducibly">Containers and Conda: running tools reproducibly</h2>
+<p>The <code>cowpy</code> process demonstrates how to support <strong>both containers and Conda</strong> for the same tool:</p>
+<ul>
+<li><code>container 'community.wave.seqera.io/library/cowpy:1.1.5--3db457ae1977a273'</code></li>
+<li><code>conda 'conda-forge::cowpy==1.1.5'</code></li>
+</ul>
+<p>How this interacts with <code>nextflow.config</code>:</p>
+<ul>
+<li>When <code>docker.enabled = true</code> (e.g. in <code>my_laptop</code> profile), Nextflow runs <code>cowpy</code> in the specified <strong>container image</strong>.</li>
+<li>When <code>conda.enabled = true</code> and Docker is disabled (e.g. <code>univ_hpc</code> profile), Nextflow creates/uses a <strong>Conda environment</strong> with <code>cowpy==1.1.5</code> from <code>conda-forge</code>.</li>
+</ul>
+<p>This gives you:</p>
+<ul>
+<li>The same process code, portable across environments.</li>
+<li>A clear link between the process and the exact tool version it needs.</li>
+</ul>
+<details class="info">
+<summary>Choosing between container and Conda</summary>
+<ul>
+<li><strong>Containers</strong> are great when Docker/Singularity is available and you want fully isolated environments.</li>
+<li><strong>Conda</strong> is useful on HPC systems where containers are harder to use or prohibited.</li>
+<li>By declaring both, you allow the <strong>profile</strong> (and cluster policies) to decide which engine to use.</li>
+</ul>
+</details>
+<h3 id="running-the-hello-pipeline-with-containers">Running the <code>hello-pipeline</code> with containers</h3>
+<p>On a laptop with Docker:</p>
+<div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>hello-pipeline.nf<span class="w"> </span>-profile<span class="w"> </span>my_laptop
+</code></pre></div>
+<ul>
+<li>Docker is enabled via the profile.</li>
+<li>Processes with <code>container</code> directives run inside containers.</li>
+</ul>
+<p>On an HPC with Singularity/Apptainer (if you adapt the config accordingly):</p>
+<ul>
+<li>Configure a profile that sets <code>singularity.enabled = true</code>.</li>
+<li>Use container URIs supported by Singularity or Apptainer.</li>
+</ul>
+<h3 id="running-the-hello-pipeline-with-conda">Running the <code>hello-pipeline</code> with Conda</h3>
+<p>On a Conda-enabled environment (no containers):</p>
+<div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>hello-pipeline.nf<span class="w"> </span>-profile<span class="w"> </span>univ_hpc
+</code></pre></div>
+<ul>
+<li><code>conda.enabled = true</code> in the profile.</li>
+<li>Processes with a <code>conda</code> directive create/use the appropriate Conda environment.</li>
+</ul>
+<details class="success">
+<summary>Exercise: switch execution modes</summary>
+<ul>
+<li>Run the workflow with a Docker-enabled profile and check that containers are pulled and run.</li>
+<li>Run the workflow with a Conda-enabled profile and check that environments are created under <code>.conda</code>/<code>.nextflow</code>.</li>
+<li>Confirm that outputs are identical (same greetings and ASCII art), even though the execution environment is different.</li>
+</ul>
+</details>
+<ul>
+<li>Using both <strong>containers</strong> and <strong>Conda</strong> in process directives, controlled by profiles, makes the <code>hello-pipeline</code> portable across laptops and HPC clusters.</li>
+</ul>
+<details class="success">
+<summary>Exercise: extend dynamic naming</summary>
+<ul>
+<li>Modify one of the modules so that the output filename also includes the current date or time (e.g. <code>COLLECTED-${batch_name}-${now}.txt</code>).</li>
+<li>Re-run the workflow and observe how filenames change.</li>
+<li>Think about pros and cons: more traceability vs. less caching and reproducibility.</li>
+</ul>
 </details>
 
 
@@ -867,44 +812,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Home
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../course_schedule/" class="md-footer__link md-footer__link--next" aria-label="Next: Course schedule">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Course schedule
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1014,12 +921,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["announce.dismiss", "content.code.copy", "navigation.top", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.code.copy", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../javascripts/consent.js"></script>
+        <script src="../../javascripts/consent.js"></script>
       
     
   </body>

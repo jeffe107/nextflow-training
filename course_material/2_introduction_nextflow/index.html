@@ -12,7 +12,7 @@
         <link rel="prev" href="../1_guidelines/">
       
       
-        <link rel="next" href="../3_generalising_nextflow/">
+        <link rel="next" href="../3_hello_pipeline/">
       
       
         
@@ -591,14 +591,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../3_generalising_nextflow/" class="md-nav__link">
+      <a href="../3_hello_pipeline/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Making a more general-purpose Nextflow workflow
+    Making a more general-purpose Nextflow pipeline
   
 
     
@@ -928,7 +928,7 @@ code<span class="w"> </span>.
 </ul>
 <p>Other directives will be explained throughout the course.</p>
 <p><strong>Exercise:</strong> The following example shows the minimal syntax to implement a process. What do you think it does? Does it create a file? If so, how is it called?</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hellow_nextflow.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -949,7 +949,7 @@ code<span class="w"> </span>.
 <p>This process uses the <code>echo</code> shell command to print <code>Hello world!</code> in an <strong>output file</strong> called <code>hello.txt</code>.</p>
 </details>
 <p>You also need a <strong>workflow</strong> block that invokes your processes—otherwise Nextflow will not run anything.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hellow_nextflow.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="n">hello_world</span><span class="o">()</span>
@@ -1075,7 +1075,7 @@ code<span class="w"> </span>.
 </details>
 <h3 id="understanding-the-input-directive">Understanding the input directive</h3>
 <p>Another directive used by most processes is <code>input</code>. It declares the file(s) or data required by the process to create the output. In the following example, a process uses <code>hello.txt</code> as input and copies its content to <code>copied_file.txt</code>:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hellow_nextflow.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1108,7 +1108,7 @@ code<span class="w"> </span>.
 <p>The <code>input</code> and <code>output</code> directives, combined with <strong>channels</strong>, create links (dependencies) between processes. The output of <code>hello_world</code> becomes the input of <code>copy_file</code> when we connect them in the workflow block. That is how we build a <strong>pipeline</strong>!</p>
 <h4 id="chaining-processes-with-channels">Chaining processes with channels</h4>
 <p>In Nextflow, data flows through <strong>channels</strong>. The output of one process is a channel; we pass it as input to the next process. The <code>workflow</code> block defines this flow:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hellow_nextflow.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
@@ -1133,7 +1133,7 @@ code<span class="w"> </span>.
 </details>
 <details class="full-code">
 <summary>This is the final script</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hellow_nextflow.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1293,13 +1293,13 @@ code<span class="w"> </span>.
         
         
           
-          <a href="../3_generalising_nextflow/" class="md-footer__link md-footer__link--next" aria-label="Next: Making a more general-purpose Nextflow workflow">
+          <a href="../3_hello_pipeline/" class="md-footer__link md-footer__link--next" aria-label="Next: Making a more general-purpose Nextflow pipeline">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Making a more general-purpose Nextflow workflow
+                Making a more general-purpose Nextflow pipeline
               </div>
             </div>
             <div class="md-footer__button md-icon">
