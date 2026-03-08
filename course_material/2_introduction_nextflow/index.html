@@ -903,10 +903,10 @@
 <h2 id="learning-outcomes">Learning outcomes</h2>
 <p><strong>After having completed this chapter you will be able to:</strong></p>
 <ul>
-<li>Understand the structure of a Nextflow DSL2 workflow</li>
-<li>Write processes and workflow definitions to produce the desired outputs</li>
-<li>Chain processes together using channels</li>
-<li>Run a Nextflow workflow</li>
+<li>Understand the structure of a Nextflow DSL2 workflow.</li>
+<li>Write processes and workflow definitions to produce the desired outputs.</li>
+<li>Chain processes together using channels.</li>
+<li>Run a Nextflow workflow.</li>
 </ul>
 <h2 id="material">Material</h2>
 <p><a class="md-button" href="../../assets/pdf/site_under_construction.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M96 0C60.7 0 32 28.7 32 64v384c0 35.3 28.7 64 64 64h80V400c0-35.3 28.7-64 64-64h176V170.5c0-17-6.7-33.3-18.7-45.3L290.7 18.7C278.7 6.7 262.5 0 245.5 0zm261.5 176H264c-13.3 0-24-10.7-24-24V58.5zM240 380c-11 0-20 9-20 20v128c0 11 9 20 20 20s20-9 20-20v-28h12c33.1 0 60-26.9 60-60s-26.9-60-60-60zm32 80h-12v-40h12c11 0 20 9 20 20s-9 20-20 20m96-80c-11 0-20 9-20 20v128c0 11 9 20 20 20h32c28.7 0 52-23.3 52-52v-64c0-28.7-23.3-52-52-52zm20 128v-88h12c6.6 0 12 5.4 12 12v64c0 6.6-5.4 12-12 12zm88-108v128c0 11 9 20 20 20s20-9 20-20v-44h28c11 0 20-9 20-20s-9-20-20-20h-28v-24h28c11 0 20-9 20-20s-9-20-20-20h-48c-11 0-20 9-20 20"/></svg></span> Download the presentation</a></p>
@@ -918,7 +918,7 @@
 code<span class="w"> </span>.
 </code></pre></div>
 <p>This folder is empty as in this exercise we will build everything from the ground up. For the following exercises, we will provide the materials and/or templates.</p>
-<p>This series of exercises will bear no biological meaning, on purpose: it is designed to explain the fundamentals of Nextflow.</p>
+<p>This exercise will bear no biological meaning, it is designed to explain the fundamentals of Nextflow.</p>
 <h3 id="creating-a-basic-process">Creating a basic process</h3>
 <p>A <strong>process</strong> is the smallest block of code with which you can build a <strong>workflow</strong>. It is a <strong>set of instructions</strong> to create one or more <strong>output(s)</strong> from zero or more <strong>input(s)</strong>. When a process runs with specific input/output data, it is called a <strong>task</strong>. The definition of a process always starts with the <strong>keyword</strong> <code>process</code>. Processes have <strong>directives</strong> (such as <code>input</code>, <code>output</code>, <code>script</code>) that define their <strong>properties</strong>.</p>
 <p>To create the simplest process possible, you need at least two <em>directives</em>:</p>
@@ -935,22 +935,20 @@ code<span class="w"> </span>.
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">process</span><span class="w"> </span><span class="n">hello_world</span><span class="w"> </span><span class="o">{</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">process</span><span class="w"> </span><span class="n">hello_world</span><span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="nl">output:</span>
-<span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="s1">&#39;results/hello.txt&#39;</span>
+<span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="s1">&#39;hello.txt&#39;</span>
 <span class="w">    </span><span class="nl">script:</span>
 <span class="w">        </span><span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">        mkdir -p results</span>
-<span class="s1">        echo &quot;Hello world!&quot; &gt; results/hello.txt</span>
+<span class="s1">        echo &quot;Hello world!&quot; &gt; hello.txt</span>
 <span class="s1">        &#39;&#39;&#39;</span>
 <span class="o">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="success">
 <summary>Answer</summary>
-<p>This process uses the <code>echo</code> shell command to print <code>Hello world!</code> in an <strong>output file</strong> called <code>hello.txt</code>, located in the <code>results</code> folder.</p>
+<p>This process uses the <code>echo</code> shell command to print <code>Hello world!</code> in an <strong>output file</strong> called <code>hello.txt</code>.</p>
 </details>
-<p>Processes are defined in a file typically named <code>main.nf</code> (or <code>workflow.nf</code>). This file should be located at the workflow root directory (here, <code>workflow/main.nf</code>). You also need a <strong>workflow</strong> block that invokes your processes—otherwise Nextflow will not run anything.</p>
+<p>You also need a <strong>workflow</strong> block that invokes your processes—otherwise Nextflow will not run anything.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
@@ -959,67 +957,10 @@ code<span class="w"> </span>.
 </code></pre></div></td></tr></table></div>
 <h3 id="executing-a-workflow">Executing a workflow</h3>
 <p>It is now time to execute your first workflow! Nextflow runs the workflow defined in the <code>workflow</code> block. By default, it executes all processes that are called from that block.</p>
-<p><strong>Exercise:</strong> Create a <code>main.nf</code> file with the <code>hello_world</code> process and the <code>workflow</code> block above. Then, execute the workflow with <code>nextflow run main.nf</code>. Where can you locate the output file?</p>
-<details class="info">
-<summary>Where do outputs go?</summary>
-<p>Nextflow runs each process in an isolated directory under <code>workflow/</code>. Output files are first written there, then can be <strong>published</strong> to a final location (e.g. <code>results/</code>) using the <code>publishDir</code> directive. For this simple example, we write directly to <code>results/</code> in the script; in real workflows you will typically use <code>publishDir</code> (covered later).</p>
-</details>
-<details class="warning">
-<summary>Code structure in Nextflow</summary>
-<p>Nextflow uses Groovy-like syntax. Proper <strong>indentation</strong> and <strong>braces</strong> matter. A few rules:</p>
-<ul>
-<li>Use consistent indentation (typically 4 spaces)</li>
-<li>Do not mix space and tab indents</li>
-<li>Every <code>process</code> and <code>workflow</code> block must be properly closed with <code>}</code></li>
-</ul>
-</details>
-<details class="success">
-<summary>Answer</summary>
-<ul>
-<li>The command to execute the workflow is:
-<div class="highlight"><pre><span></span><code>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
-</code></pre></div></li>
-<li>The output is written to <code>results/hello.txt</code> (as specified in the script). You can check with <code>ls -alh results/</code> and <code>cat results/hello.txt</code></li>
-<li>Nextflow creates the <code>results/</code> directory if it does not exist</li>
-</ul>
-</details>
-<p><strong>Exercise:</strong> Re-run the exact same command. What happens?</p>
-<details class="success">
-<summary>Answer</summary>
-<p>Nextflow runs again, but it may <strong>reuse cached results</strong> from a previous run. If the process has already produced the same output (Nextflow hashes inputs to detect this), you might see a message indicating that the task was cached. To force a fresh run, you can use <code>nextflow run main.nf -resume</code> after a failure, or delete the <code>workflow/</code> directory to clear the cache.</p>
-</details>
-<details class="info">
-<summary>Nextflow execution and caching</summary>
-<p>By default, Nextflow:</p>
-<ul>
-<li>Runs each process in an isolated directory under <code>workflow/</code></li>
-<li>Caches task results based on input hashes—if you run again with the same inputs, it may reuse cached outputs</li>
-<li>Uses <code>-resume</code> to continue a failed run without re-executing completed tasks</li>
-<li>To force re-execution of everything, remove the <code>workflow/</code> directory before running</li>
-</ul>
-</details>
-<p>Long commands in the <code>script</code> block can be split across lines using triple quotes:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">process</span><span class="w"> </span><span class="n">long_message</span><span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="nl">output:</span>
-<span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="s1">&#39;results/long_message.txt&#39;</span>
-<span class="w">    </span><span class="nl">script:</span>
-<span class="w">        </span><span class="s1">&#39;&#39;&#39;</span>
-<span class="s1">        echo &quot;I want to print a very very very very very \</span>
-<span class="s1">        very very very long string in my output&quot; &gt; results/long_message.txt</span>
-<span class="s1">        &#39;&#39;&#39;</span>
-<span class="o">}</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="understanding-the-input-directive">Understanding the input directive</h3>
-<p>Another directive used by most processes is <code>input</code>. It declares the file(s) or data required by the process to create the output. In the following example, a process uses <code>results/hello.txt</code> as input and copies its content to <code>results/copied_file.txt</code>:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p><strong>Exercise:</strong> Create a <code>hello_world.nf</code> file with the <code>hello_world</code> process and the <code>workflow</code> block below. Then, execute the workflow with <code>nextflow run hello_world.nf</code>. Where can you locate the output file? Explore the directory.</p>
+<details class="full-code">
+<summary>Full code file</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hello_world.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1029,19 +970,140 @@ code<span class="w"> </span>.
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">process</span><span class="w"> </span><span class="n">copy_file</span><span class="w"> </span><span class="o">{</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#!/usr/bin/env nextflow</span>
+
+<span class="cm">/*</span>
+<span class="cm">* Use echo to print &#39;Hello World!&#39; to a file</span>
+<span class="cm">*/</span>
+
+<span class="n">process</span><span class="w"> </span><span class="n">hello_world</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nl">output:</span>
+<span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="s1">&#39;hello.txt&#39;</span>
+<span class="w">    </span><span class="nl">script:</span>
+<span class="w">        </span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">        echo &quot;Hello world!&quot; &gt; hello.txt</span>
+<span class="s1">        &#39;&#39;&#39;</span>
+<span class="o">}</span>
+
+<span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">hello_world</span><span class="o">()</span>
+<span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Answer</summary>
+<p>When you run Nextflow for the first time in a given directory, it creates a directory called work where it will write all files (and any symlinks) generated in the course of execution.</p>
+<p>Within the work directory, Nextflow organizes outputs and logs per process call. For each process call, Nextflow creates a nested subdirectory, named with a hash in order to make it unique, where it will stage all necessary inputs (using symlinks by default), write helper files, and write out logs and any outputs of the process.</p>
+<p>The path to that subdirectory is shown in truncated form in square brackets in the console output. Looking at what we got for the run shown above, the console log line for the hello_world process starts with <em><code>[00/00000]</code></em>. That corresponds to the following directory path: <em><code>work/00/0000000000...</code></em></p>
+</details>
+<p><strong>Exercise:</strong> Now, let&rsquo;s modify the workflow to specify where we want our output. Can you infer where the output will be stored?:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">After</label><label for="__tabbed_1_2">Before</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hello_world.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">hello_world</span><span class="o">()</span>
+
+<span class="nl">publish:</span>
+<span class="w">    </span><span class="n">hello_folder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hello_world</span><span class="o">.</span><span class="na">out</span>
+<span class="o">}</span>
+
+<span class="n">output</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">hello_folder</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="s1">&#39;hello_folder&#39;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hello_world.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">hello_world</span><span class="o">()</span>
+<span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<details class="success">
+<summary>Answer</summary>
+<ul>
+<li>The output is written to <code>results/hello_folder/hello.txt</code>. You can check with <code>ls -alh results/</code> and <code>cat results/hello_folder/hello.txt</code>.</li>
+<li>Nextflow creates the <code>results/</code> directory if it does not exist.</li>
+</ul>
+</details>
+<details class="warning">
+<summary>Code structure in Nextflow</summary>
+<p>Nextflow uses Groovy-like syntax. Proper <strong>indentation</strong> and <strong>braces</strong> matter. A few rules:</p>
+<ul>
+<li>Use consistent indentation (typically 4 spaces).</li>
+<li>Do not mix space and tab indents.</li>
+<li>Every <code>process</code> and <code>workflow</code> block must be properly closed with <code>}</code>.</li>
+</ul>
+</details>
+<p><strong>Exercise:</strong> Re-run the exact same command. What happens?</p>
+<details class="success">
+<summary>Answer</summary>
+<p>Nextflow runs again, but it may <strong>reuse cached results</strong> from a previous run. If the process has already produced the same output (Nextflow hashes inputs to detect this), you might see a message indicating that the task was cached. To force a fresh run, you can use <code>nextflow run hello_nextflow.nf -resume</code> after a failure, or delete the <code>work/</code> directory to clear the cache.</p>
+</details>
+<details class="info">
+<summary>Nextflow execution and caching</summary>
+<p>By default, Nextflow:</p>
+<ul>
+<li>Runs each process in an isolated directory under <code>work/</code>.</li>
+<li>Caches task results based on input hashes—if you run again with the same inputs, it may reuse cached outputs.</li>
+<li>Uses <code>-resume</code> to continue a failed run without re-executing completed tasks.</li>
+<li>To force re-execution of everything, remove the <code>work/</code> directory before running.</li>
+</ul>
+</details>
+<h3 id="understanding-the-input-directive">Understanding the input directive</h3>
+<p>Another directive used by most processes is <code>input</code>. It declares the file(s) or data required by the process to create the output. In the following example, a process uses <code>hello.txt</code> as input and copies its content to <code>copied_file.txt</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">process</span><span class="w"> </span><span class="n">copy_file</span><span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="nl">input:</span>
 <span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="n">hello</span>
 <span class="w">    </span><span class="nl">output:</span>
-<span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="s1">&#39;results/copied_file.txt&#39;</span>
+<span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="s1">&#39;copied_file.txt&#39;</span>
 <span class="w">    </span><span class="nl">script:</span>
 <span class="w">        </span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">        mkdir -p results</span>
-<span class="s2">        cp ${hello} results/copied_file.txt</span>
+<span class="s2">        cp ${hello} copied_file.txt</span>
 <span class="s2">        &quot;&quot;&quot;</span>
 <span class="o">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Here, <code>hello</code> is a <strong>channel</strong> that will emit the file path. The <code>path</code> qualifier tells Nextflow to stage the file into the process work directory.</p>
+<p>Here, <code>hello</code> is a <strong>Channel</strong> that will emit the file path. The <code>path</code> qualifier tells Nextflow to stage the file into the process work directory.</p>
+<details class="info">
+<summary>Nextflow channels</summary>
+<p>Channels are the core of the Nextflow&rsquo;s engine. There are multiple ways to create channels:</p>
+<ul>
+<li>Check the <a href="https://docs.seqera.io/nextflow/reference/channel">documentation</a> to know more about the Channel factories.</li>
+<li>We will discuss more about this in the lecture.</li>
+</ul>
+</details>
 <h3 id="creating-a-workflow-with-several-processes">Creating a workflow with several processes</h3>
 <p>The <code>input</code> and <code>output</code> directives, combined with <strong>channels</strong>, create links (dependencies) between processes. The output of <code>hello_world</code> becomes the input of <code>copy_file</code> when we connect them in the workflow block. That is how we build a <strong>pipeline</strong>!</p>
 <h4 id="chaining-processes-with-channels">Chaining processes with channels</h4>
@@ -1051,20 +1113,26 @@ code<span class="w"> </span>.
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="n">hello_ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hello_world</span><span class="o">()</span>
-<span class="w">    </span><span class="n">copy_file</span><span class="o">(</span><span class="n">hello_ch</span><span class="o">)</span>
+<span class="w">    </span><span class="n">copy_file</span><span class="o">(</span><span class="n">hello_ch</span><span class="o">.</span><span class="na">out</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></td></tr></table></div>
 <p><code>hello_world()</code> returns a channel emitting the output file(s). We pass that channel to <code>copy_file</code>, which will run once per item emitted (here, one file).</p>
 <details class="bug">
 <summary><code>Missing input</code> or <code>No such file</code></summary>
-<p>If you see errors about missing inputs, check that:
-* The workflow block correctly passes the output of one process as input to the next
-* Output names match what the downstream process expects
-* File paths in your <code>script</code> use the correct variable names (e.g. <code>${hello}</code>)</p>
+<p>If you see errors about missing inputs, check that:</p>
+<ul>
+<li>The workflow block correctly passes the output of one process as input to the next.</li>
+<li>Output names match what the downstream process expects.</li>
+<li>File paths in your <code>script</code> use the correct variable names (e.g. <code>${hello}</code>).</li>
+</ul>
 </details>
-<p><strong>Exercise:</strong> Add the <code>copy_file</code> process to your <code>main.nf</code>, and update the <code>workflow</code> block to call both processes. Run the workflow with <code>nextflow run main.nf</code>. What do you see?</p>
+<p><strong>Exercise:</strong> Add the <code>copy_file</code> process to your <code>hello_nextflow.nf</code>, and update the <code>workflow</code> block to call both processes. Run the workflow with <code>nextflow run hello_nextflow.nf</code>. What do you see?</p>
 <details class="tip">
-<summary>Your main.nf should look like this</summary>
+<summary>Where are you going to store the output of <code>copy_file</code>?</summary>
+<p>Following what we did in the previous exercise, try to figure out where to store the output of this process.</p>
+</details>
+<details class="full-code">
+<summary>This is the final script</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1084,40 +1152,81 @@ code<span class="w"> </span>.
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">process</span><span class="w"> </span><span class="n">hello_world</span><span class="w"> </span><span class="o">{</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#!/usr/bin/env nextflow</span>
+
+<span class="cm">/*</span>
+<span class="cm">* Use echo to print &#39;Hello World!&#39; to a file</span>
+<span class="cm">*/</span>
+
+<span class="n">process</span><span class="w"> </span><span class="n">hello_world</span><span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="nl">output:</span>
-<span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="s1">&#39;results/hello.txt&#39;</span>
+<span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="s1">&#39;hello.txt&#39;</span>
 <span class="w">    </span><span class="nl">script:</span>
-<span class="w">        </span><span class="s1">&#39;echo &quot;Hello world!&quot; &gt; results/hello.txt&#39;</span>
+<span class="w">        </span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">        echo &quot;Hello world!&quot; &gt; hello.txt</span>
+<span class="s1">        &#39;&#39;&#39;</span>
 <span class="o">}</span>
 
 <span class="n">process</span><span class="w"> </span><span class="n">copy_file</span><span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="nl">input:</span>
 <span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="n">hello</span>
 <span class="w">    </span><span class="nl">output:</span>
-<span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="s1">&#39;results/copied_file.txt&#39;</span>
+<span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="s1">&#39;copied_file.txt&#39;</span>
 <span class="w">    </span><span class="nl">script:</span>
-<span class="w">        </span><span class="s2">&quot;cp ${hello} results/copied_file.txt&quot;</span>
+<span class="w">        </span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        cp ${hello} copied_file.txt</span>
+<span class="s2">        &quot;&quot;&quot;</span>
 <span class="o">}</span>
 
 <span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="n">hello_ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hello_world</span><span class="o">()</span>
-<span class="w">    </span><span class="n">copy_file</span><span class="o">(</span><span class="n">hello_ch</span><span class="o">)</span>
+<span class="w">    </span><span class="n">hello_world</span><span class="o">()</span>
+<span class="w">    </span><span class="n">copy_file</span><span class="o">(</span><span class="n">hello_world</span><span class="o">.</span><span class="na">out</span><span class="o">)</span>
+
+<span class="w">    </span><span class="nl">publish:</span>
+<span class="w">    </span><span class="n">hello_folder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hello_world</span><span class="o">.</span><span class="na">out</span>
+<span class="w">    </span><span class="n">copy_folder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copy_file</span><span class="o">.</span><span class="na">out</span>
+<span class="o">}</span>
+
+<span class="n">output</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">hello_folder</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="s1">&#39;hello_folder&#39;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="n">copy_folder</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="s1">&#39;copy_folder&#39;</span>
+<span class="w">    </span><span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <details class="success">
 <summary>Answer</summary>
 <ul>
-<li>Nextflow runs <code>hello_world</code> first, then <code>copy_file</code> with the output of <code>hello_world</code></li>
-<li>Both <code>results/hello.txt</code> and <code>results/copied_file.txt</code> are produced</li>
-<li>To force a full re-run (e.g. after changing the script), you can delete the <code>workflow/</code> directory and run again</li>
+<li>Nextflow runs <code>hello_world</code> first, then <code>copy_file</code> with the output of <code>hello_world</code>.</li>
+<li>Both <code>hello.txt</code> and <code>copied_file.txt</code> are produced, being stored individually within <code>hello_folder</code> and <code>copy_folder</code>, respectively.</li>
+<li>To force a full re-run (e.g. after changing the script), you can delete the <code>work</code> directory and run again.</li>
 </ul>
-</details>
-<p><strong>Exercise:</strong> To trigger execution of both processes from scratch, remove the <code>results/</code> folder (or the <code>workflow/</code> cache), then run <code>nextflow run main.nf</code>. What happens?</p>
-<details class="success">
-<summary>Answer</summary>
-<p>Nextflow builds the execution graph, runs <code>hello_world</code>, then passes its output to <code>copy_file</code>, which runs and produces <code>results/copied_file.txt</code>. You only need to define the workflow connections—Nextflow figures out the execution order automatically.</p>
 </details>
 <h4 id="referencing-process-outputs">Referencing process outputs</h4>
 <p>When you have many processes, repeating file paths can be error-prone. In Nextflow, you reference process outputs by the <strong>channel</strong> they produce. The workflow block is the single place where you define how data flows:</p>
@@ -1131,7 +1240,7 @@ code<span class="w"> </span>.
 <summary>Each process output should have a single producer</summary>
 <p>A given output file should be produced by only one process. If two processes could produce the same output, the workflow would be ambiguous. Design your pipeline so each output has a clear, single producer.</p>
 </details>
-<p>Try to structure your workflows this way in the next series of exercises!</p>
+<p>We are ready to continue with a more complex pipeline!</p>
 
 
 
