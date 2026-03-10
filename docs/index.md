@@ -13,9 +13,7 @@ This course is built on the official [Nextflow training material](https://traini
 * This website
 * Shared document (through email)
 * Repository with files
-* A workspace on GitHub Codespaces:
-
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/jeffe107/nextflow-training?quickstart=1)
+* A workspace on GitHub Codespaces
 
 ## Learning outcomes
 
