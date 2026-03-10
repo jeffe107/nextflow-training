@@ -11,6 +11,6 @@
 | Session 4      | 13:45    | 14:15    | Conditionals, scripts _à la carte_, report               |
 | Exercises 4    | 14:15    | 15:00    | Metagenomics pipeline                                    |
 |                | 15:00    | 15:15    | Break                                                    |
-| Exercises 4    | 15:15    | 16:30    | Wrap your pipeline or genomics pipeline                  |
+| Exercises 5    | 15:15    | 16:30    | Wrap your pipeline or genomics pipeline                  |
 | Session 5      | 16:30    | 16:45    | nf-core                                                  |
 | Q&A            | 16:45    | 17:00    | Wrap-up                                                  |
