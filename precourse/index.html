@@ -397,6 +397,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#back-up-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Back-up plan
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -575,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../course_material/5_rnaseq_executors_profiles/" class="md-nav__link">
+      <a href="../course_material/4_rnaseq_executors_profiles/" class="md-nav__link">
         
   
   
@@ -706,6 +717,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#back-up-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Back-up plan
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -739,20 +761,41 @@
 <p>You can test your UNIX skills with a quiz <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2BEWeOKLbIRGBT_aDEGPce1FOaVYBbhBiaqcaHoBKNB27MQ/viewform?usp=sf_link">here</a>. If you don&rsquo;t have experience with UNIX command line, or if you are unsure whether you meet the prerequisites, follow our <a href="https://edu.sib.swiss/pluginfile.php/2878/mod_resource/content/4/couselab-html/content.html">online UNIX tutorial</a>.</p>
 <h2 id="software">Software</h2>
 <h3 id="os">OS</h3>
-<p>This is an OS-agnostic course that requires from only to count with a laptop, a modern browser and the GitHub Codespaces account.</p>
+<p>This is an OS-agnostic course that requires from only to count with a laptop, a modern browser and a GitHub Codespaces account.</p>
 <h3 id="code-editor">Code editor</h3>
-<p>You will be provided with a link to create the workspace in GitHub Codespaces. This link will automatically open VS code on your browser. Thus, it is expected that you are familiar with the layout and basic functionalities VS code has. Otherwise, please check this quick <a href="https://code.visualstudio.com/docs/getstarted/getting-started">tutorial</a> before the course to understand where everything is. Either way, there will be a short introduction to VS code at the beginning of the online session.</p>
+<p>You will be provided with a link to create the workspace in GitHub Codespaces automatically. This link will open VS code on your browser, and hence it is expected that you are familiar with the layout and basic functionalities VS code has. Otherwise, please check this quick <a href="https://code.visualstudio.com/docs/getstarted/getting-started">tutorial</a> before the course to understand where everything is. Either way, there will be a short introduction to VS code at the beginning of the online session.</p>
 <p>This is the link to GitHub Codespaces:</p>
-<p><a href="https://codespaces.new/nextflow-io/training?quickstart=1&amp;ref=master"><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg" /></a></p>
+<p><a href="https://codespaces.new/jeffe107/nextflow-training?quickstart=1"><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg" /></a></p>
+<p>!!! warning (Do not start working on it)
+        We have limited resources with the free tier of GitHub Codespaces, so please do not start working or runing thins through it. You just need to create it before the course.</p>
 <h4 id="video-tutorial">Video tutorial</h4>
 <p>You can find a (cool) video tutorial to learn about VS code:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1ZfO149BJvg" title="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen><a href="https://www.ivatech.dev" style="display:none;">website development</a></iframe>
 
-<details class="info">
-<summary>If you want also AI capabilities&hellip;</summary>
-<p>There are alternatives to VS code. Try Cursor, which is both an IDE and an AI code assistant.
-<a href="https://cursor.com/home">https://cursor.com/home</a></p>
-</details>
+<h3 id="back-up-plan">Back-up plan</h3>
+<p>If by any chance, you exceed the Codespace resources. We have prepared a solution using <a href="https://codesandbox.io/">CodeSandbox</a>. These are the steps to follow:</p>
+<ol>
+<li>Go to the website: <a href="https://codesandbox.io/">CodeSandbox</a>.</li>
+<li>Sign in using your GitHub or your Google Account (top right corner).</li>
+<li>Once signed-in, click on <code>+ Create</code> (top right corner).</li>
+<li>Select <code>Docker CodeSanbox</code>.</li>
+<li>On the <code>Configure window</code> leave everything as default and click on Create Devbox.</li>
+<li>Wait until the microVM is created.</li>
+<li>Now it looks like VS code. Create a new terminal then.</li>
+<li>Run the following commands on the terminal:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span>https://get.sdkman.io<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+<span class="nb">source</span><span class="w"> </span><span class="s2">&quot;/root/.sdkman/bin/sdkman-init.sh&quot;</span>
+sdk<span class="w"> </span>install<span class="w"> </span>java<span class="w"> </span><span class="m">17</span>.0.10-tem
+curl<span class="w"> </span>-s<span class="w"> </span>https://get.nextflow.io<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+chmod<span class="w"> </span>+x<span class="w"> </span>nextflow
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/project/workspace
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/jeffe107/nextflow-training
+<span class="nb">cd</span><span class="w"> </span>nextflow-training
+</code></pre></div>
+<ol start="9">
+<li>Now you should be into the repository folder, just like on GitHub Codespaces.</li>
+</ol>
 
 
 

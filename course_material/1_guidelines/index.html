@@ -580,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5_rnaseq_executors_profiles/" class="md-nav__link">
+      <a href="../4_rnaseq_executors_profiles/" class="md-nav__link">
         
   
   
@@ -754,30 +754,7 @@
 <p style='text-align: justify;'>GitHub Codespaces is almost one of its kind nowadays services as there are really only a few alternative options to replace in case of any problem. It provides a complete self-contained execution environment and connected to an IDE for free! However, the resources are limited on the free tier we will be using for this course. Good news is that it should be sufficient for the purpose of the course, and in normal conditions no one would (hopefully) run out the resources allocated by Codespaces on the free tier.</p>
 
 <p>Without further ado, you can start here:</p>
-<p><a href="https://codespaces.new/nextflow-io/training?quickstart=1&amp;ref=master"><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg" /></a></p>
-<p>If by any chance, you exceed the Codespace resources. We have prepared a solution using <a href="https://codesandbox.io/">CodeSandbox</a>. These are the steps to follow:</p>
-<ol>
-<li>Go to the website: <a href="https://codesandbox.io/">CodeSandbox</a>.</li>
-<li>Sign in using your GitHub or your Google Account (top right corner).</li>
-<li>Once signed-in, click on <code>+ Create</code> (top right corner).</li>
-<li>Select <code>Docker CodeSanbox</code>.</li>
-<li>On the <code>Configure window</code> leave everything as default and click on Create Devbox.</li>
-<li>Wait until the microVM is created.</li>
-<li>Now it looks like VS code. Create a new terminal then.</li>
-<li>Run the following commands on the terminal:</li>
-</ol>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span>https://get.sdkman.io<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
-<span class="nb">source</span><span class="w"> </span><span class="s2">&quot;/root/.sdkman/bin/sdkman-init.sh&quot;</span>
-sdk<span class="w"> </span>install<span class="w"> </span>java<span class="w"> </span><span class="m">17</span>.0.10-tem
-curl<span class="w"> </span>-s<span class="w"> </span>https://get.nextflow.io<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
-chmod<span class="w"> </span>+x<span class="w"> </span>nextflow
-<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/project/workspace
-git<span class="w"> </span>clone<span class="w"> </span>https://github.com/jeffe107/nextflow-training
-<span class="nb">cd</span><span class="w"> </span>nextflow-training
-</code></pre></div>
-<ol start="9">
-<li>Now you should be into the repository folder, just like on GitHub Codespaces.</li>
-</ol>
+<p><a href="https://codespaces.new/jeffe107/nextflow-training?quickstart=1"><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg" /></a></p>
 <p>All information of this course is based on the <a href="https://docs.seqera.io/nextflow/">official Nextflow documentation</a> and uses <strong>Nextflow DSL2</strong> syntax.</p>
 <h2 id="website-colour-code-explanation">Website colour code explanation</h2>
 <p>We tried to use a colour code throughout the website to make the different pieces of information easily distinguishable. Here&rsquo;s a quick summary about the colour blocks you will encounter:</p>

@@ -619,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5_rnaseq_executors_profiles/" class="md-nav__link">
+      <a href="../4_rnaseq_executors_profiles/" class="md-nav__link">
         
   
   
@@ -867,7 +867,11 @@ code<span class="w"> </span>.
 <p>You also need a <strong>workflow</strong> block that invokes your processes—otherwise Nextflow will not run anything.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hellow_nextflow.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+
+<span class="w">    </span><span class="nl">main:</span>
 <span class="w">    </span><span class="n">hello_world</span><span class="o">()</span>
 <span class="o">}</span>
 </code></pre></div></td></tr></table></div>
@@ -893,7 +897,9 @@ code<span class="w"> </span>.
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#!/usr/bin/env nextflow</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#!/usr/bin/env nextflow</span>
 
 <span class="cm">/*</span>
 <span class="cm">* Use echo to print &#39;Hello World!&#39; to a file</span>
@@ -909,6 +915,8 @@ code<span class="w"> </span>.
 <span class="o">}</span>
 
 <span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+
+<span class="w">    </span><span class="nl">main:</span>
 <span class="w">    </span><span class="n">hello_world</span><span class="o">()</span>
 <span class="o">}</span>
 </code></pre></div></td></tr></table></div>
@@ -934,7 +942,11 @@ code<span class="w"> </span>.
 <span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+
+<span class="w">    </span><span class="nl">main:</span>
 <span class="w">    </span><span class="n">hello_world</span><span class="o">()</span>
 
 <span class="nl">publish:</span>
@@ -951,7 +963,11 @@ code<span class="w"> </span>.
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hello_world.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+
+<span class="w">    </span><span class="nl">main:</span>
 <span class="w">    </span><span class="n">hello_world</span><span class="o">()</span>
 <span class="o">}</span>
 </code></pre></div></td></tr></table></div>
@@ -1027,7 +1043,11 @@ code<span class="w"> </span>.
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hellow_nextflow.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+
+<span class="w">    </span><span class="nl">main:</span>
 <span class="w">    </span><span class="n">hello_ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hello_world</span><span class="o">()</span>
 <span class="w">    </span><span class="n">copy_file</span><span class="o">(</span><span class="n">hello_ch</span><span class="o">.</span><span class="na">out</span><span class="o">)</span>
 <span class="o">}</span>
@@ -1091,7 +1111,9 @@ code<span class="w"> </span>.
 <span class="normal">40</span>
 <span class="normal">41</span>
 <span class="normal">42</span>
-<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#!/usr/bin/env nextflow</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#!/usr/bin/env nextflow</span>
 
 <span class="cm">/*</span>
 <span class="cm">* Use echo to print &#39;Hello World!&#39; to a file</span>
@@ -1118,6 +1140,8 @@ code<span class="w"> </span>.
 <span class="o">}</span>
 
 <span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+
+<span class="w">    </span><span class="nl">main:</span>
 <span class="w">    </span><span class="n">hello_world</span><span class="o">()</span>
 <span class="w">    </span><span class="n">copy_file</span><span class="o">(</span><span class="n">hello_world</span><span class="o">.</span><span class="na">out</span><span class="o">)</span>
 
