@@ -11,7 +11,7 @@ process BOWTIE2 {
 
     script:
     """
-    export BOWTIE2_INDEXES=/workspaces/nextflow-training/test_pipelines/TaxoFlow/data/genome/TAIR10
+    export BOWTIE2_INDEXES=/workspaces/nextflow-training/exercises/TaxoFlow/data/genome/TAIR10
     bowtie2 -x $bowtie2_index -1 ${reads[0]} -2 ${reads[1]} -p 2 -S ${sample_id}.sam --un-conc-gz ${sample_id}
     """
 }
