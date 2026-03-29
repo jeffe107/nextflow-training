@@ -303,4 +303,4 @@ Then add an `output` block that:
 ## Solution
 
 ??? success "Solution"
-        You can find the solution to this exercise [here](https://github.com/jeffe107/nextflow-training/tree/main/solutions)
+    You can find the solution to this exercise [here](https://github.com/jeffe107/nextflow-training/tree/main/solutions).
